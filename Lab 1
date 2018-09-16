@@ -1,0 +1,95 @@
+
+//Madalyne Savich,msavich2,LAB 01,MW 10:25 AM-11:40 AM
+	//I did not collaborate with anyone on this assignment.
+
+public class Question1 {
+		public static void main (String[] args) {
+			
+			// Print "Hello World onto the console
+			System.out.print("Hello World");
+		}
+	}
+  
+  
+public class Question2 {
+
+	public static void main (String[] args) {
+		
+		//Create variable called 'favoriteColor' and allow for it to be 'green'
+		String favoriteColor = "green";
+		
+		// Print onto the console
+		System.out.println("My favorite color is: "+ favoriteColor);
+	}
+}
+
+
+public class Question3 {
+	
+	public static void main (String[] args) {
+		// Insert the scanner
+		java.util.Scanner scanner =
+				new java.util.Scanner (System.in);
+		
+		//Prompt the user to enter a decimal number
+		System.out.print("Enter a decimal number: ");
+		double decimalOne = scanner.nextDouble();
+		
+		//Prompt the user to enter a second decimal number
+		System.out.print("Enter another decimal number: ");
+		double decimalTwo = scanner.nextDouble();
+		
+		// Close the scanner
+		scanner.close();
+		
+		//Perform addition between the chosen decimal points
+		System.out.println("Sum of chosen values: " + (decimalOne + decimalTwo));
+		
+		//Perform subtraction between the chosen decimal points
+		System.out.println("Subtraction between the chosen values: " + (decimalOne - decimalTwo));
+		
+		//Perform multiplication between the chosen decimal points
+		System.out.println("The product of the chosen values: " + (decimalOne * decimalTwo));
+		
+		//Perform division between the chosen decimal points
+		System.out.println("The quotient of the chosen values: " + (decimalOne / decimalTwo) );
+		}
+}
+
+public class Question4 {
+
+		public static void main (String[] args) {
+		// Insert the scanner
+		java.util.Scanner scanner =
+			new java.util.Scanner (System.in);
+			
+		//Prompt the user to enter the temperature in Fahrenheit
+		System.out.print("What is the temperature in Fahrenheit? ");
+		double temperatureF = scanner.nextDouble();
+		
+		/*Convert this value into Kelvin 
+		State what the temperature is on the console*/
+		System.out.print("The temperature in Kelvin is " + (((5f/9f)*(temperatureF - 32))+273));
+		}
+	}
+  
+  public class Question5 {
+	public static void main (String[] args) {
+		// Insert the scanner
+		java.util.Scanner scanner =
+			new java.util.Scanner (System.in);
+			
+		// Prompt the user to enter the mass in grams
+		System.out.print("What is the number of grams? ");
+		double mass = scanner.nextDouble();
+		
+		// Create the variable 'c'
+		double c = 299792;	
+		
+		// Determine the energy (J) using the function, the variables, and mass that had been inputed
+		System.out.print("The total energy (J): " + (mass*(c*c)));
+	}
+}
+
+
+
