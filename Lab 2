@@ -1,0 +1,86 @@
+public static void main(String[] args) {
+		//Question 1
+    // Scanner in
+		Scanner scan = new Scanner(System.in);
+    // Set secret number to 6
+		int secret = 6;
+    // Prompt user
+		System.out.println("Guess a number:");
+		int input = scan.nextInt();
+    // Compare values
+		if (input == secret) {
+			System.out.println("You're a winner!");
+		} else {
+			System.out.println("Not a winner...");
+		}
+
+		//Question 2
+    // Prompt User
+		System.out.println("Input a number:");
+		double five = scan.nextDouble();
+		// Compare user input and use modulo to determine if the value is a multiple of 5
+    if (five%5 == 0) {
+			System.out.println("This is a multiple of 5!");
+		} else {
+			System.out.println("This is not a multiple of 5...");
+		}
+		
+		//Question 3
+    // Prompt user
+		System.out.println("Input a number:");
+		double input = scan.nextDouble();
+		if (input > 0) {
+			System.out.println("Input is positive!");
+		} else if (input < 0){
+			System.out.println("Input is negative!");
+		} else if (input == 0) {
+			System.out.println("Input is 0!");
+		}
+	
+		//Question 4
+    // Prompt the user
+		System.out.println("Enter your age:");
+		double age = scan.nextDouble();
+    // Run comparisons
+		if (age < 13 && age > 0) {
+			System.out.println("You're just a kid.");
+		} else if (age <= 0) {
+			System.out.println("Hmm...");
+		} else if (age < 20) {
+			System.out.println("You're a teenager!");
+		} else if (age < 30) {
+			System.out.println("You're getting older...");
+		} else if (age > 30) {
+			System.out.println("You're over the hill!");
+		}
+		
+		
+		//Question 5
+		// Prompt user
+		System.out.println("Enter 1 if you want to discuss sports or enter 2 if you want to discuss food.");
+		double choice1 = scan.nextDouble();
+		// Run comparisons for choice 1
+    if (choice1 == 1) {
+			System.out.println("Do you play ice hockey? Enter 1 for yes, 2 for no.");
+			double choice2 = scan.nextDouble();
+			if (choice2 == 1) {
+				System.out.println("Awesome!");
+			} else if (choice2 == 2) {
+				System.out.println("You should try it some day.");
+			} else {
+				System.out.println("This is not a valid command");
+			}
+    // Run comparisons for choice 2
+		} else if (choice1 == 2) {
+			System.out.println("How many times did you eat pizza this week?");
+			double choice3 = scan.nextDouble();
+			if (choice3 > 5) {
+				System.out.println("You need to eat better");
+			} else {
+				System.out.println("O.K.");
+			}
+		} else {
+			System.out.println("This is not a valid command");
+		}
+		scan.close();
+	}
