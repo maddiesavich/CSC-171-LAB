@@ -1,0 +1,94 @@
+import java.util.Scanner;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		//Question 1
+    // Import scanner
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Input a number: ");
+		int input = scan.nextInt();
+		int multiple = 1;
+    // Test input
+		while (multiple <= 10) {
+			System.out.print(input * multiple);
+			multiple++;
+      // Print comma to separate each value
+				if (multiple <= 10) {
+					System.out.print(", ");
+				}
+		}
+		
+		//Question 2
+		System.out.println("Input a number to have its first 10 multiples printed.");
+		int firsttenfor = scan.nextInt();
+		for (int multiple1 = 1; multiple1 < 11; multiple1++) {
+			System.out.print(firsttenfor * multiple1);
+				if (multiple1 < 10) {
+					System.out.print(", ");
+				}
+		}
+		
+		//Question 3
+		System.out.println("Every third number from 1 - 100: ");
+		int hundred = -2;
+    // While to determine if values are under 100
+		while (hundred < 100) {
+			System.out.print(hundred + 3);
+			hundred = hundred + 3;
+      // Print each value
+				if (hundred < 100) {
+					System.out.print(", ");
+				}
+		}
+		
+		//Question 4
+		System.out.print("Input a number to count down to 0: ");
+		double count = scan.nextDouble();
+		// Check if at 0
+    while (count >= 0) {
+    // Subtract one from value
+			System.out.print(count--);
+				// Print commas to separate each line
+        if (count >= 0) {
+					System.out.print(", ");
+				}
+		}
+		
+		//Question 5
+		System.out.println("Input numbers (Enter 0 to calculate sum): ");
+		// Double to add decimals as well
+    double sum = 0;
+		double num = scan.nextDouble();
+		// Sum while the number does not equal 0
+    while (num != 0) {
+			double num = scan.nextDouble();
+			sum = num + sum;
+			num = num;
+		}
+    // if 0, sum
+		if (num == 0) {
+			System.out.println("Sum: " + sum);
+		}
+	
+		//Question 6
+		System.out.println("Input words: ");
+		String input = scan.next();
+		String total = null;
+		while (!input.equals("stop")) {
+			if(fullWord == null) {
+				total = input;
+				input = scan.next();
+			}
+			else {
+			fullWord = total + " " + input;
+			userWord = scan.next();
+			}
+		}
+    // if to stop
+		if (input.equals("stop")) {
+			System.out.println(total);
+		}
+		scan.close();
+	}
+}
