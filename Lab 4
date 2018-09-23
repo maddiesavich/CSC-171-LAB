@@ -1,0 +1,89 @@
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		//Question 1
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter numbers to be squared. When finished input 0.");
+		double sq;
+ // do until 8 is entered
+		do {
+		Sq = scan.nextDouble();
+		// if square is 0, break
+			if (sq == 0) {
+				break;
+			}
+		
+		System.out.println(Math.pow(Square, 2));
+		} while (sq != 0);
+
+		
+		//Question 2
+		System.out.println("Input a number to print a times table of your input from 1");
+		int input;
+		usern = scan.nextInt();
+		
+    // for to create table
+		for (int i = 1; i <= input; i++) {
+			System.out.println("");
+			
+			for (int j = 1; j <= usern; j++) {
+				System.out.print(j*i + " ");
+			}
+		}
+		
+		//Question 3
+		System.out.println("Enter 3 numbers separated by hitting enter.");
+		int one = scan.nextInt();
+		int two = scan.nextInt();
+		int three = scan.nextInt();
+		int stop = 0;
+		
+    // while to stop
+		while (stop != 1) {
+			
+			if (one == 0) {
+				if (two == 0) {
+					if (three == 0) {
+						break;
+					}
+				}
+			}
+			
+			while (one <= two) {
+				System.out.print(one + " ");
+				one = one + three;
+				}
+			System.out.println("");
+			one = scan.nextInt();
+			two = scan.nextInt();
+			three = scan.nextInt();
+		}
+		
+		//Question 4
+		System.out.println("Enter a number to find the alternating harmonic series sum until that number.");
+		double n = scan.nextDouble();
+		double denominatorOdd = 1;
+		double denominatorEven = 2;
+		double addition = 0;
+		
+		//while (even <= n || odd <= n)
+		while (even <= n) {
+			
+			float subtraction = (float) ((1/(odd)) - (1/(even)));
+			addition = (float) addition + subtraction;
+			odd = odd + 2;
+			even = even + 2;
+		}
+		if (n % 2 != 0) {
+			addition = addition + (1/n);
+		}
+		
+		System.out.println(addition);
+		scan.close();
+	}
+	
+}
